@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" style="background: transparent !important;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC Server Info</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- 🔥 CRITICAL: Body must be completely transparent to avoid black square -->
+<body>
+    <div class="server-info-container">
+        <div class="server-header">
+            <img src="myLogo.png" alt="GC Logo" class="server-logo">
+            <div class="server-name-section">
+                <div class="server-name">GangCity RP</div>
+                <div class="server-subtitle">GangCity Roleplay</div>
+            </div>
+        </div>
+
+        <div class="info-row">
+            <div class="info-item">
+                <i class="fas fa-users"></i>
+                <span id="player-count">0/48</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-id-badge"></i>
+                <span>ID: <span id="player-id">0</span></span>
+            </div>
+        </div>
+
+        <div class="info-row job-row">
+            <div class="info-item full-width">
+                <i class="fas fa-briefcase"></i>
+                <span id="player-job">Unemployed</span>
+            </div>
+        </div>
+
+        <div class="info-row money-row">
+            <div class="info-item money-item">
+                <i class="fas fa-money-bill-wave cash-icon"></i>
+                <span id="player-cash">$0</span>
+            </div>
+            <div class="info-item money-item">
+                <i class="fas fa-university bank-icon"></i>
+                <span id="player-bank">$0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

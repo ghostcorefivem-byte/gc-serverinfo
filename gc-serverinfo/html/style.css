@@ -1,0 +1,149 @@
+﻿/* ✅ GC-ServerInfo Transparent ps-hud Compatible Edition */
+/* By GangCity RP */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: transparent !important;
+    background-color: transparent !important;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* 🔥 Transparent floating container (next to ps-hud) */
+.server-info-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px;
+    padding: 10px 12px;
+    min-width: 300px;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 99999;
+    animation: slideInRight 0.4s ease-out;
+    pointer-events: auto;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 🔥 Server Header */
+.server-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.server-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+
+.server-name-section {
+    flex: 1;
+}
+
+.server-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+}
+
+.server-subtitle {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    margin-top: 2px;
+}
+
+/* 🔹 Info Rows */
+.info-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.info-item {
+    flex: 1;
+    background: transparent !important;
+    border: none !important;
+    padding: 5px 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-item i {
+    color: #DC143C;
+    font-size: 14px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.info-item span {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+}
+
+/* 💰 Money Section */
+.money-item i.cash-icon {
+    color: #2ecc71 !important;
+}
+
+.money-item i.bank-icon {
+    color: #3498db !important;
+}
+
+.money-item span {
+    color: #ffffff !important;
+}
+
+/* ✨ Subtle Hover Glow */
+.info-item:hover i,
+.info-item:hover span {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+    .server-info-container {
+        top: 10px;
+        right: 10px;
+        min-width: 240px;
+    }
+
+    .server-name {
+        font-size: 14px;
+    }
+
+    .info-item span {
+        font-size: 12px;
+    }
+}
